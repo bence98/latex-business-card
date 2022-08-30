@@ -27,16 +27,25 @@
 \usepackage{wrapfig}
 
 % --- fonts -----------------------
-% MinionPro is difficult to set up. 
-%   see e.g. https://kieranhealy.org/blog/archives/2012/11/10/installing-minion-pro/
-\usepackage[lf, mathtabular, minionint]{MinionPro} % serif
 \usepackage[scaled = 0.9]{FiraSans}                % sans
 \usepackage[varqu, scaled = 0.95]{zi4}             % mono w/ straight quotes
 \usepackage{fontawesome}                           % FA icons
 
+\newcommand\firstname{Bence}
+\newcommand{\middlename}{Viktor}
+\newcommand{\lastname}{Csókás}
 
+\newcommand{\lang}{en}
+% full or short
+\newcommand{\namestyle}{full}
 
+\input{defines-\lang}
 
+\newcommand{\occupation}{\occupEmbDev}
+\newcommand{\firmname}{\firmProlan}
+
+\newcommand{\dispname}{\expandafter\csname\namestyle name\endcsname}
+\newcommand{\phonetic}{\expandafter\csname\namestyle phon\endcsname}
 
 \begin{document}
 
@@ -46,18 +55,18 @@
   \includegraphics[width = 0.3\textwidth]{img/circular-telles.png}
   \end{wrapfigure}
 
-  \underline{\large\textsf{\textbf{Michael DeCrescenzo}}}
+  \underline{\large\textsf{\textbf{\dispname}}}\vspace{2pt}\\
+  {\tiny\emph{\phonetic}\par}
 
-  {Ph.D.\ Candidate} \\
-  {University of Wisconsin{\textendash}Madison}
+  {\firmname}
 
-  \emph{Bayesian analysis of U.S.\ elections, \\ public opinion, and voting}
+  \emph{\occupation}
 
   \vfill 
-  {\faEnvelope} \texttt{decrescenzo@wisc.edu} \hfill 
-  {\faGithub} \texttt{mikedecr} \\
-  {\faPhone} +1{\textendash}555{\textendash}555{\textendash}5555 \hfill 
-  {\faGlobe} \texttt{mikedecr.github.io}
+  {\faEnvelope} \texttt{bence98@sch.bme.hu} \hfill 
+  {\faGithub} \texttt{bence98} \\
+  {\faPhone} +1{\textendash}555{\textendash}555{\textendash}5555 \hfill
+  {\faGlobe} \texttt{home.sch.bme.hu/\textasciitilde bence98}
   
 
 \end{document}
